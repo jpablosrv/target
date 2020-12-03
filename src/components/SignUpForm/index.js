@@ -1,10 +1,11 @@
 import React from 'react';
 import { func } from 'prop-types';
-import { Button, View } from 'react-native';
+import { View } from 'react-native';
 import { useStatus, LOADING } from '@rootstrap/redux-tools';
 
 import { signUp } from 'actions/userActions';
 import Input from 'components/common/Input';
+import Button from 'components/common/Button';
 import strings from 'locale';
 import useForm from 'hooks/useForm';
 import useValidation from 'hooks/useValidation';
@@ -53,7 +54,7 @@ const SignUpForm = ({ onSubmit }) => {
   );
 
   return (
-    <>
+    <View style={styles.container}>
       <Input
         label={strings.SIGN_UP.email}
         keyboardType="email-address"
@@ -74,15 +75,15 @@ const SignUpForm = ({ onSubmit }) => {
         {...inputProps(FIELDS.passwordConfirmation)}
       />
       <ErrorView errors={{ error }} />
-      <View style={styles.button}>
-        <Button
-          testID="signup-submit-button"
-          title={status === LOADING ? strings.COMMON.loading : strings.SIGN_UP.button}
-          onPress={handleSubmit}
-          disabled={formHasErrors}
-        />
-      </View>
-    </>
+      <Button
+        testID="signup-submit-button"
+        disabled={formHasErrors}
+        textTitle={
+          status === LOADING ? strings.COMMON.loading : strings.SIGN_UP.button.toUpperCase()
+        }
+        handleSubmit={handleSubmit}
+      />
+    </View>
   );
 };
 

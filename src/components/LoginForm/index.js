@@ -1,6 +1,6 @@
 import React from 'react';
 import { func } from 'prop-types';
-import { Button, View } from 'react-native';
+import { View } from 'react-native';
 import { useStatus, LOADING } from '@rootstrap/redux-tools';
 
 import { login } from 'actions/userActions';
@@ -11,6 +11,7 @@ import loginValidations from 'validations/loginValidations';
 import ErrorView from 'components/common/ErrorView';
 import useTextInputProps from 'hooks/useTextInputProps';
 import strings from 'locale';
+import Button from 'components/common/Button';
 import styles from './styles';
 
 const FIELDS = {
@@ -52,7 +53,7 @@ const LoginForm = ({ onSubmit }) => {
   );
 
   return (
-    <>
+    <View style={styles.container}>
       <Input
         label={strings.SIGN_IN.email}
         keyboardType="email-address"
@@ -67,15 +68,13 @@ const LoginForm = ({ onSubmit }) => {
         {...inputProps(FIELDS.password)}
       />
       <ErrorView errors={{ error }} />
-      <View style={styles.button}>
-        <Button
-          testID="login-submit-button"
-          title={status === LOADING ? strings.COMMON.loading : strings.SIGN_IN.button}
-          onPress={handleSubmit}
-          disabled={formHasErrors}
-        />
-      </View>
-    </>
+      <Button
+        testID="login-submit-button"
+        textTitle={status === LOADING ? strings.COMMON.loading : strings.SIGN_IN.button}
+        handleSubmit={handleSubmit}
+        disabled={formHasErrors}
+      />
+    </View>
   );
 };
 
