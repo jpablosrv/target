@@ -1,8 +1,9 @@
 import { StyleSheet } from 'react-native';
+import { ALICE_BLUE } from 'constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#F5FCFF',
+    backgroundColor: ALICE_BLUE,
     flex: 1,
     paddingTop: 50,
     paddingHorizontal: 50,

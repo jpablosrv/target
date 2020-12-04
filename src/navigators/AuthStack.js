@@ -6,6 +6,8 @@ import { LOGIN_SCREEN, SIGN_UP_SCREEN } from 'constants/screens';
 import LoginScreen from 'screens/LoginScreen';
 import SignUpScreen from 'screens/SignUpScreen';
 
+import { SUMMER_SKY } from 'constants/colors';
+
 const Stack = createStackNavigator();
 
 const AuthStack = () => (
@@ -14,7 +16,7 @@ const AuthStack = () => (
       title: 'TARGET',
       headerBackTitleVisible: false,
       headerStyle: {
-        backgroundColor: '#2FBCF7',
+        backgroundColor: SUMMER_SKY,
       },
     }}>
     <Stack.Screen name={LOGIN_SCREEN} component={LoginScreen} />

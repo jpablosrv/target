@@ -1,22 +1,14 @@
 import { StyleSheet } from 'react-native';
+import { BLACK, GREY, GREY_DISABLED, WHITE } from '../../../constants/colors';
 
 const styles = StyleSheet.create({
   container: {
-    flexDirection: 'column',
     flex: 0.6,
     justifyContent: 'space-evenly',
   },
-  iconContainer: {
-    alignContent: 'center',
-    alignItems: 'center',
-  },
-  imgIconContainer: {
-    width: 123,
-    height: 123,
-  },
   buttonContainer: {
     elevation: 8,
-    backgroundColor: '#000',
+    backgroundColor: BLACK,
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 12,
@@ -25,16 +17,16 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 18,
-    color: '#fff',
+    color: WHITE,
     fontWeight: 'bold',
     alignSelf: 'center',
     textTransform: 'uppercase',
   },
   btnDisable: {
-    color: '#505050',
+    color: GREY_DISABLED,
   },
   btnContainerDisable: {
-    backgroundColor: '#808080',
+    backgroundColor: GREY,
   },
 });
 

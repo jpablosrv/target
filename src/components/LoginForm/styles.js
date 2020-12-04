@@ -12,14 +12,6 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     borderWidth: 2,
   },
-  iconContainer: {
-    alignContent: 'center',
-    alignItems: 'center',
-  },
-  imgIconContainer: {
-    width: 123,
-    height: 123,
-  },
 });
 
 export default styles;

@@ -1,15 +1,15 @@
 import React from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { func, string } from 'prop-types';
+import { func, string, bool } from 'prop-types';
 import styles from './styles';
 
 const Button = ({ disabled, handleSubmit, textTitle }) => (
   <View style={styles.container}>
     <TouchableOpacity
       onPress={handleSubmit}
-      style={[styles.buttonContainer, disabled ? styles.btnContainerDisable : null]}
+      style={[styles.buttonContainer, disabled && styles.btnContainerDisable]}
       disabled={disabled}>
-      <Text style={[styles.buttonText, disabled ? styles.btnDisable : null]}>{textTitle}</Text>
+      <Text style={[styles.buttonText, disabled && styles.btnDisable]}>{textTitle}</Text>
     </TouchableOpacity>
   </View>
 );
@@ -17,6 +17,7 @@ const Button = ({ disabled, handleSubmit, textTitle }) => (
 Button.propTypes = {
   handleSubmit: func.isRequired,
   textTitle: string.isRequired,
+  disabled: bool.isRequired,
 };
 
 export default Button;
