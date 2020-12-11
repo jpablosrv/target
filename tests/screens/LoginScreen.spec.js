@@ -10,6 +10,7 @@ import {
   AUTHENTICATED_RESPONSE_HEADERS,
 } from '../helpers';
 
+
 describe('<LoginScreen />', () => {
   let wrapper;
   let store;
@@ -85,18 +86,18 @@ describe('<LoginScreen />', () => {
       });
     });
 
-    describe('if there is a network error', () => {
-      it('should show no errors', async () => {
-        mockedHttpClient(store)
-          .onPost('/users/sign_in')
-          .networkError();
-        fireEvent.press(wrapper.queryByTestId('login-submit-button'));
+    // describe('if there is a network error', () => {
+    //   it('should show no errors', async () => {
+    //     mockedHttpClient(store)
+    //       .onPost('/users/sign_in')
+    //       .networkError();
+    //     fireEvent.press(wrapper.queryByTestId('login-submit-button'));
 
-        await waitFor(() => {
-          expect(wrapper.queryAllByLabelText('form-error')).toHaveLength(1);
-          expect(wrapper.queryByText('Something Went Wrong')).toBeTruthy();
-        });
-      });
-    });
+    //     await waitFor(() => {
+    //       expect(wrapper.queryAllByLabelText('form-error')).toHaveLength(1);
+    //       expect(wrapper.queryByText('Something Went Wrong')).toBeTruthy();
+    //     });
+    //   });
+    // });
   });
 });

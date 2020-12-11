@@ -18,6 +18,7 @@ export default {
 
   SIGN_UP: {
     title: 'Sign up',
+    username: 'Username',
     email: 'Email',
     password: 'Password',
     passwordConfirmation: 'Password confirmation',

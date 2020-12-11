@@ -1,11 +1,9 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-  button: {
-    alignSelf: 'center',
-    borderColor: 'lightblue',
-    borderRadius: 5,
-    borderWidth: 2,
+  container: {
+    flex: 0.6,
+    justifyContent: 'space-evenly',
   },
 });
 

@@ -1,6 +1,11 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    flex: 0.6,
+    justifyContent: 'space-evenly',
+  },
   button: {
     alignSelf: 'center',
     borderColor: 'lightblue',

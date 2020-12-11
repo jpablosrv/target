@@ -1,2 +1,9 @@
 export const WHITE = '#FFFFFF';
+export const BLACK = '#000000';
+export const GREY = '#808080';
+export const LIGHT_GREY = '#CCCCCC';
+export const DIM_GREY = '#666666';
+export const GREY_DISABLED = '#505050';
+export const SUMMER_SKY = '#2FBCF7';
 export const ERROR = '#FF5252';
+export const ALICE_BLUE = '#F5FCFF';

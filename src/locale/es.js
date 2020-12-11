@@ -13,6 +13,7 @@ export default {
 
   SIGN_UP: {
     title: 'Registro',
+    username: 'Nombre de Usuario',
     email: 'Email',
     password: 'Contraseña',
     passwordConfirmation: 'Repetir contraseña',

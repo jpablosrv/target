@@ -1,13 +1,14 @@
 import { StyleSheet } from 'react-native';
+import { DIM_GREY, LIGHT_GREY } from 'constants/colors';
 
 const styles = StyleSheet.create({
   input: {
     height: 50,
-    borderColor: '#CCCCCC',
+    borderColor: LIGHT_GREY,
     borderWidth: 1,
   },
   inputActive: {
-    borderColor: '#666666',
+    borderColor: DIM_GREY,
   },
   button: {
     alignSelf: 'center',
