@@ -3,12 +3,13 @@ import { Text, View, TouchableOpacity } from 'react-native';
 import { func, string, bool } from 'prop-types';
 import styles from './styles';
 
-const Button = ({ disabled, handleSubmit, textTitle }) => (
+const Button = ({ disabled, handleSubmit, textTitle, testID }) => (
   <View style={styles.container}>
     <TouchableOpacity
       onPress={handleSubmit}
       style={[styles.buttonContainer, disabled && styles.btnContainerDisable]}
-      disabled={disabled}>
+      disabled={disabled}
+      testID={testID}>
       <Text style={[styles.buttonText, disabled && styles.btnDisable]}>{textTitle}</Text>
     </TouchableOpacity>
   </View>
